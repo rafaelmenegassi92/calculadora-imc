@@ -1,65 +1,64 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+//inicialização
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+//window.alert ('Caso seja uma emergência ligue para 44 9 9999 9999')
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+//window.confirm('Anotou, se não, aperte F5')
+//var nome = window.prompt('Qual o seu nome?')
+//var telefone = window.prompt('Qual o seu telefone?')
+//window.alert ('Seja bem vinda, ' + nome + ', vamos te ligar no numero ' + telefone )
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        //var n1   = Number (window.prompt ('digite o valor médio que pode utilizar para protudos '))
+        //var n2   = Number (window.prompt ('Agora o valor médio para gastos com serviço: '))  
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        var real    = Number (window.prompt ('Insira o valor: '))   
+        var real2   = Number (window.prompt ('Insira outro valor: '))  
+        var dolar   = real / 4.2
+        var euro    = real / 5.4
+     
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+document.write(`Valor em reais é:
+ ${real.toLocaleString('pt-br', {style:  'currency', currency: 'BRL'} )} <br/>`) 
+        
+      
+document.write(`Valor em reais é:
+ ${real.toLocaleString('pt-br', {style:  'currency', currency: 'BRL'} )} <br/>`) 
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+document.write(`Valor em dolar é:
+ ${dolar.toLocaleString('pt-br', {style:  'currency', currency: 'USD'} )} <br/>`)
+
+document.write(`Valor em euro  é: 
+${euro.toLocaleString('pt-br', {style:  'currency', currency: 'EUR'} )} <br/> <br/>`)  
+
+       
+        var v_desconto = real * ((real2 / 2) /100)  //var para calcular o desconto.
+        
+        var c_desconto = real - v_desconto //var que subtrai o valor do desconto e traz o valor final
+
+        document.write (`Valor do desconto (Valor ${real} div/2 e depois por /100 = : ${v_desconto} <br/> <br/> `)
+        document.write(`Vc recebeu um desonto de:
+
+         ${v_desconto.toLocaleString('pt-br', {style:  'currency', currency: 'BRL'} )} <br/>`) 
+
+         document.write(`Valor com desconto:
+         ${c_desconto.toLocaleString('pt-br', {style:  'currency', currency: 'BRL'} )} <br/>`) 
+
+        
+
+        
+
+
+        
+        //var res  = n1 + n2
+        //window.alert ('Seu orçamento não passara de: ' + res )
+
+//corpo do site
+
+        //document.write (`Olá ${nome.toUpperCase()}  <br/>`)
+        //document.write (`Ligaremos no numero ${telefone}  <br/>`)
+        //document.write (`Produtos é R$ ${n1}  <br/>`)
+        //document.write (`Serviços é R$ ${n2}  <br/>`)
+        //document.write (`Total  R$  ${res} <br/>`)
+        //document.write (`O Valor do seu orçamento é R$ <strong> ${res} </strong> <br/>`)
+
